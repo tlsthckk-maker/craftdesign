@@ -14,27 +14,29 @@ export default function Home() {
       </div>
 
       {/* 3. 메인 히어로 영역 (Hero Area) */}
-      <div className="flex-1 flex flex-col items-center justify-center px-4 py-20 text-center">
-        {/* 메인 카피 */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-none mb-6">
-          <span className="block mb-2">YOUR IDEA,</span>
-          <span className="block">OUR FACTORY.</span>
-        </h1>
+      <div className="w-full bg-[#0055FF] border-y-4 border-black py-24 md:py-40 flex flex-col items-center justify-center overflow-hidden">
         
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-10 tracking-tight">
-          디자인만 하세요. 생산은 우리가 합니다.
-        </h2>
+        {/* 거대한 Marquee */}
+        <div className="w-full overflow-hidden whitespace-nowrap flex mb-12 md:mb-16">
+          <div className="animate-[marquee_20s_linear_infinite] inline-block font-black text-7xl md:text-9xl lg:text-[10rem] tracking-tighter uppercase shrink-0 text-white leading-none px-4">
+            YOUR IDEA, OUR FACTORY ✦ CRAFTDESIGN ✦ HIGHER B2B CUSTOM MANUFACTURING AGENCY ✦&nbsp;
+          </div>
+          <div className="animate-[marquee_20s_linear_infinite] inline-block font-black text-7xl md:text-9xl lg:text-[10rem] tracking-tighter uppercase shrink-0 text-white leading-none px-4" aria-hidden="true">
+            YOUR IDEA, OUR FACTORY ✦ CRAFTDESIGN ✦ HIGHER B2B CUSTOM MANUFACTURING AGENCY ✦&nbsp;
+          </div>
+        </div>
 
-        {/* 서브 카피 */}
-        <p className="max-w-3xl text-lg sm:text-xl font-medium mb-12 leading-relaxed text-gray-900 px-4 break-keep">
-          공장 찾다 지친 2030 브랜드 디렉터들을 위한 가장 직관적인 B2B 제조 솔루션. <br className="hidden sm:block" />
-          27년의 현장 노하우로 당신의 아이디어를 실물로 꽂아드립니다.
-        </p>
+        {/* 서브 카피 & CTA */}
+        <div className="text-center px-4 flex flex-col items-center">
+          <p className="max-w-4xl text-xl sm:text-2xl md:text-3xl font-black mb-12 leading-relaxed text-white break-keep">
+            디자인만 하세요. 생산은 우리가 합니다.<br className="hidden sm:block" />
+            27년의 현장 노하우로 당신의 아이디어를 실물로 꽂아드립니다.
+          </p>
 
-        {/* CTA 버튼 */}
-        <Link href="/contact" className="group relative bg-blue-600 text-white font-black text-xl sm:text-2xl px-12 py-6 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] active:translate-y-2 active:translate-x-2 active:shadow-none inline-block">
-          [ START PROJECT ➔ ]
-        </Link>
+          <Link href="/contact" className="group relative bg-[#CCFF00] text-black font-black text-xl sm:text-2xl md:text-4xl px-12 py-6 border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] md:hover:shadow-[16px_16px_0px_rgba(0,0,0,1)] active:translate-y-2 active:translate-x-2 active:shadow-none inline-block">
+            START PROJECT ➔
+          </Link>
+        </div>
       </div>
 
       {/* 4. Why Us 섹션 (Section 2) */}
