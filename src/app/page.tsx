@@ -40,41 +40,55 @@ export default function Home() {
       </div>
 
       {/* 4. Why Us 섹션 (Section 2) */}
-      <section id="about" className="w-full py-16 md:py-24 bg-[#F4F4F0] px-4 border-t-4 border-black">
+      <section id="about" className="w-full py-16 md:py-24 bg-yellow-50 px-4 border-t-4 border-black">
         <div className="max-w-6xl mx-auto">
           {/* 섹션 타이틀 */}
-          <h2 className="text-4xl md:text-7xl font-black mb-12 md:mb-16 text-center tracking-tighter break-keep">
-            STOP WASTING TIME.
-          </h2>
+          <div className="text-center mb-16 md:mb-20">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter inline-block border-b-8 border-black pb-4 break-keep">
+              WHY US?
+            </h2>
+          </div>
 
           {/* 3개의 특징 카드 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* 카드 1 */}
-            <div className="bg-white border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-transform duration-200 p-6 md:p-8 flex flex-col items-start">
-              <span className="inline-block bg-[#CCFF00] text-black border-4 border-black font-black px-4 py-2 text-base md:text-lg uppercase mb-4 md:mb-6">
+            <div className="relative bg-white border-4 border-black shadow-[6px_6px_0_0_#000] p-8 flex flex-col hover:-translate-y-2 hover:shadow-[10px_10px_0_0_#000] transition-transform duration-200">
+              {/* 스티커 뱃지 */}
+              <div className="absolute -top-5 -left-5 bg-red-500 border-4 border-black text-white text-2xl font-black px-4 py-2 -rotate-6 z-10 shadow-[4px_4px_0_0_#000]">
+                01
+              </div>
+              <h3 className="font-black text-2xl mb-4 text-black uppercase break-keep mt-2">
                 27 YEARS
-              </span>
-              <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
+              </h3>
+              <p className="font-bold text-gray-700 leading-relaxed break-keep">
                 어설픈 중개는 거부합니다. 27년 짬바의 팩트 기반 컨설팅으로 불량률과 납기 지연을 사전에 차단합니다.
               </p>
             </div>
 
             {/* 카드 2 */}
-            <div className="bg-white border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-transform duration-200 p-6 md:p-8 flex flex-col items-start">
-              <span className="inline-block bg-blue-500 text-white border-4 border-black font-black px-4 py-2 text-base md:text-lg uppercase mb-4 md:mb-6">
+            <div className="relative bg-white border-4 border-black shadow-[6px_6px_0_0_#000] p-8 flex flex-col hover:-translate-y-2 hover:shadow-[10px_10px_0_0_#000] transition-transform duration-200">
+              {/* 스티커 뱃지 */}
+              <div className="absolute -top-5 -left-5 bg-blue-500 border-4 border-black text-white text-2xl font-black px-4 py-2 -rotate-6 z-10 shadow-[4px_4px_0_0_#000]">
+                02
+              </div>
+              <h3 className="font-black text-2xl mb-4 text-black uppercase break-keep mt-2">
                 ZERO LIMITS
-              </span>
-              <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
+              </h3>
+              <p className="font-bold text-gray-700 leading-relaxed break-keep">
                 트렌디한 에코백과 볼캡부터 고기능성 군용 장비까지. 카테고리의 한계를 부수는 글로벌 생산 네트워크를 제공합니다.
               </p>
             </div>
 
             {/* 카드 3 */}
-            <div className="bg-white border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-transform duration-200 p-6 md:p-8 flex flex-col items-start">
-              <span className="inline-block bg-[#FF0000] text-white border-4 border-black font-black px-4 py-2 text-base md:text-lg uppercase mb-4 md:mb-6">
+            <div className="relative bg-white border-4 border-black shadow-[6px_6px_0_0_#000] p-8 flex flex-col hover:-translate-y-2 hover:shadow-[10px_10px_0_0_#000] transition-transform duration-200">
+              {/* 스티커 뱃지 */}
+              <div className="absolute -top-5 -left-5 bg-green-500 border-4 border-black text-white text-2xl font-black px-4 py-2 -rotate-6 z-10 shadow-[4px_4px_0_0_#000]">
+                03
+              </div>
+              <h3 className="font-black text-2xl mb-4 text-black uppercase break-keep mt-2">
                 RISK HANDLER
-              </span>
-              <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
+              </h3>
+              <p className="font-bold text-gray-700 leading-relaxed break-keep">
                 커스텀 제작의 수많은 변수와 리스크. 대형 업체조차 기피하는 그 까다로운 현장을 최전선에서 완벽하게 통제하는 진짜 실무자입니다.
               </p>
             </div>
@@ -143,7 +157,7 @@ export default function Home() {
             <div className="group bg-white border-4 border-black shadow-[10px_10px_0_0_#000] hover:-translate-y-3 hover:-translate-x-3 hover:shadow-[20px_20px_0_0_#000] transition-all duration-300 ease-in-out flex flex-col cursor-pointer">
               <div className="w-full aspect-[4/3] border-b-4 border-black relative overflow-hidden bg-gray-100">
                 <img 
-                  src="https://loremflickr.com/800/600/tactical,vest/all" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Modular_Tactical_Vest.jpg" 
                   alt="Tactical Vest" 
                   className="w-full h-full object-cover grayscale"
                 />
