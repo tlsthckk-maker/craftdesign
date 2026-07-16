@@ -127,6 +127,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* OUR WORK 섹션 (Portfolio) */}
+      <section id="work" className="w-full py-16 md:py-24 bg-[#CCFF00] px-4 border-t-4 border-black">
+        <div className="max-w-6xl mx-auto">
+          {/* 섹션 타이틀 */}
+          <div className="mb-12 md:mb-16 border-b-8 border-black pb-8">
+            <h2 className="text-4xl md:text-7xl font-black text-left tracking-tighter break-keep">
+              OUR WORK.
+            </h2>
+          </div>
+
+          {/* 3개의 포트폴리오 카드 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* 포트폴리오 1 */}
+            <div className="group bg-white border-4 border-black shadow-[8px_8px_0_0_#000] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0_0_#000] transition-all duration-200 flex flex-col">
+              <div className="w-full aspect-[4/3] border-b-4 border-black relative overflow-hidden bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=800&q=80" 
+                  alt="Factory Production" 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 className="font-black text-2xl mb-2 uppercase break-keep">TACTICAL GEAR</h3>
+                  <p className="text-lg font-bold text-gray-800 break-keep">고기능성 군용/아웃도어 특수 목적 가방 대량 생산</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 포트폴리오 2 */}
+            <div className="group bg-white border-4 border-black shadow-[8px_8px_0_0_#000] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0_0_#000] transition-all duration-200 flex flex-col">
+              <div className="w-full aspect-[4/3] border-b-4 border-black relative overflow-hidden bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=800&q=80" 
+                  alt="Headwear Factory" 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 className="font-black text-2xl mb-2 uppercase break-keep">HEADWEAR BATCH</h3>
+                  <p className="text-lg font-bold text-gray-800 break-keep">글로벌 스트릿 브랜드 시그니처 볼캡 및 버킷햇 라인</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 포트폴리오 3 */}
+            <div className="group bg-white border-4 border-black shadow-[8px_8px_0_0_#000] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0_0_#000] transition-all duration-200 flex flex-col">
+              <div className="w-full aspect-[4/3] border-b-4 border-black relative overflow-hidden bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1620803131757-0a2a4b3f5d5b?w=800&q=80" 
+                  alt="Auto Accessories" 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <div className="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 className="font-black text-2xl mb-2 uppercase break-keep">AUTO ACCESSORY</h3>
+                  <p className="text-lg font-bold text-gray-800 break-keep">내구성과 디자인을 모두 잡은 차량용 커스텀 파우치</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. HOW IT WORKS 섹션 (Section 4) */}
       <section id="process" className="w-full py-16 md:py-24 bg-[#F4F4F0] px-4 border-t-4 border-black">
         <div className="max-w-6xl mx-auto">
