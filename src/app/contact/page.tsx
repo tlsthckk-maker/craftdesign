@@ -87,14 +87,14 @@ export default function ContactPage() {
           <div className="flex flex-col gap-4">
             <label className="font-black text-xl md:text-2xl uppercase border-b-4 border-black pb-2 inline-block">참고 도면/이미지 업로드</label>
             <div className="relative border-4 border-dashed border-black bg-white hover:bg-[#F4F4F0] transition-colors p-8 md:p-16 flex flex-col items-center justify-center cursor-pointer group">
-              <input 
-                type="file" 
-                multiple 
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-              />
               <div className="text-4xl md:text-6xl mb-4 group-hover:scale-110 transition-transform">📂</div>
               <p className="text-lg md:text-2xl font-bold text-center break-keep">여기에 파일을 드래그해서 놓거나 클릭하세요.</p>
               <p className="text-sm md:text-base text-gray-500 font-medium mt-2 text-center">최대 50MB, JPG/PNG/PDF/ZIP 지원</p>
+              <input 
+                type="file" 
+                multiple 
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+              />
             </div>
           </div>
 
