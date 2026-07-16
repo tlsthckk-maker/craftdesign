@@ -14,10 +14,10 @@ const notoSansKr = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   title: "CRAFTDESIGN | 당신의 브랜드를 완성하는 B2B 제조 에이전시",
-  description: "15년 노하우의 글로벌 생산 네트워크. 가방, 모자, 악세사리부터 고기능성 장비까지. 디자인만 하세요. 2030 브랜드 디렉터들을 위한 가장 직관적인 제조 총괄 코디네이터 서비스입니다.",
+  description: "27년 노하우의 글로벌 생산 네트워크. 가방, 모자, 악세사리부터 고기능성 장비까지. 디자인만 하세요. 2030 브랜드 디렉터들을 위한 가장 직관적인 제조 총괄 코디네이터 서비스입니다.",
   keywords: "크래프트디자인, 패션 하청, 굿즈 제작, B2B 제조, 모자 공장, 가방 제작, 공장 매칭 에이전시, 브랜드 창업",
   openGraph: {
-    title: "CRAFTDESIGN | 15년 차 B2B 제조 총괄 에이전시",
+    title: "CRAFTDESIGN | 27년 차 B2B 제조 총괄 에이전시",
     description: "아이디어만 가져오세요. 공장 매칭부터 생산, 검수, 납품까지 완벽하게 통제합니다.",
     type: "website",
     url: "https://www.craftdesign.co.kr",

@@ -51,7 +51,7 @@ export default function ContactPage() {
             START YOUR PROJECT.
           </h1>
           <p className="text-lg md:text-2xl font-bold text-gray-800 break-keep">
-            아이디어만 가져오세요. 15년의 현장 노하우로 최적의 제조 솔루션을 24시간 이내에 제안해 드립니다.
+            아이디어만 가져오세요. 27년의 현장 노하우로 최적의 제조 솔루션을 24시간 이내에 제안해 드립니다.
           </p>
         </div>
 

@@ -28,7 +28,7 @@ export default function Home() {
         {/* 서브 카피 */}
         <p className="max-w-3xl text-lg sm:text-xl font-medium mb-12 leading-relaxed text-gray-900 px-4 break-keep">
           공장 찾다 지친 2030 브랜드 디렉터들을 위한 가장 직관적인 B2B 제조 솔루션. <br className="hidden sm:block" />
-          15년의 현장 노하우로 당신의 아이디어를 실물로 꽂아드립니다.
+          27년의 현장 노하우로 당신의 아이디어를 실물로 꽂아드립니다.
         </p>
 
         {/* CTA 버튼 */}
@@ -50,10 +50,10 @@ export default function Home() {
             {/* 카드 1 */}
             <div className="bg-white border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-transform duration-200 p-6 md:p-8 flex flex-col items-start">
               <span className="inline-block bg-[#CCFF00] text-black border-4 border-black font-black px-4 py-2 text-base md:text-lg uppercase mb-4 md:mb-6">
-                15 YEARS
+                27 YEARS
               </span>
               <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
-                어설픈 중개는 거부합니다. 15년 짬바의 팩트 기반 컨설팅으로 불량률과 납기 지연을 사전에 차단합니다.
+                어설픈 중개는 거부합니다. 27년 짬바의 팩트 기반 컨설팅으로 불량률과 납기 지연을 사전에 차단합니다.
               </p>
             </div>
 
