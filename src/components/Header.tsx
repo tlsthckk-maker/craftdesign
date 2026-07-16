@@ -31,9 +31,9 @@ export default function Header() {
               { name: "CAPABILITIES", href: "/#capabilities" },
               { name: "PROCESS", href: "/#process" }
             ].map((item) => (
-              <Link key={item.name} href={item.href} className="px-4 py-2 border-2 border-transparent hover:border-black hover:bg-[#CCFF00] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all cursor-pointer uppercase">
+              <a key={item.name} href={item.href} className="px-4 py-2 border-2 border-transparent hover:border-black hover:bg-[#CCFF00] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all cursor-pointer uppercase">
                 {item.name}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -61,14 +61,14 @@ export default function Header() {
                   { name: "CAPABILITIES", href: "/#capabilities" },
                   { name: "PROCESS", href: "/#process" }
                 ].map((item) => (
-                  <Link 
+                  <a 
                     key={item.name} 
                     href={item.href} 
                     onClick={closeMenu}
                     className="w-full text-left text-lg font-bold text-black uppercase hover:bg-[#F4F4F0] transition-colors p-4 border-b-2 border-black"
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 ))}
                 
                 <Link 
