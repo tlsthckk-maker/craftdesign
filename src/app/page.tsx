@@ -261,17 +261,61 @@ export default function Home() {
       </section>
 
       {/* 7. CONTACT 섹션 (Section 5) */}
-      <section className="w-full py-20 md:py-32 bg-black px-4 text-center border-t-4 border-black flex flex-col items-center justify-center">
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
-          <h2 className="text-4xl md:text-7xl font-black text-[#CCFF00] mb-4 md:mb-6 tracking-tighter break-keep">
-            LET&apos;S MAKE SOMETHING SICK.
-          </h2>
-          <p className="text-lg md:text-2xl text-white mb-8 md:mb-12 font-medium break-keep">
-            당신의 넥스트 베스트셀러, 지금 견적을 확인하세요.
-          </p>
-          <Link href="/contact" className="group relative bg-pink-500 text-white font-black text-lg md:text-2xl px-8 py-4 md:px-12 md:py-6 border-4 border-white shadow-[4px_4px_0px_#CCFF00] md:shadow-[8px_8px_0px_#CCFF00] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_#CCFF00] md:hover:shadow-[12px_12px_0px_#CCFF00] active:translate-y-2 active:translate-x-2 active:shadow-none break-keep w-full sm:w-auto inline-block">
-            폼 작성하고 24시간 내 견적 받기
-          </Link>
+      <section id="contact" className="w-full py-16 md:py-24 bg-white px-4 border-t-4 border-black">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-20">
+          
+          {/* 타이틀 영역 */}
+          <div className="flex-1">
+            <h2 className="text-5xl md:text-7xl font-black text-left tracking-tighter inline-block border-b-8 border-black pb-4 break-keep mb-8">
+              CONTACT US.
+            </h2>
+            <p className="text-xl md:text-2xl font-bold text-gray-800 leading-relaxed break-keep">
+              아이디어만 가져오세요.<br/>
+              27년의 현장 노하우로 최적의 제조 솔루션을 24시간 이내에 제안해 드립니다.
+            </p>
+          </div>
+
+          {/* 폼 영역 */}
+          <div className="flex-1 flex justify-center md:justify-end">
+            <form className="w-full max-w-xl bg-white border-4 border-black p-8 md:p-12 shadow-[8px_8px_0_0_#000] flex flex-col gap-6">
+              <div className="flex flex-col">
+                <label htmlFor="name" className="font-bold text-lg mb-2">회사명 / 성함</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  className="bg-white border-4 border-black rounded-none p-4 text-lg font-bold outline-none focus:border-blue-600 transition-colors"
+                  placeholder="홍길동 / 크래프트디자인"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="contactInfo" className="font-bold text-lg mb-2">연락처 / 이메일</label>
+                <input 
+                  type="text" 
+                  id="contactInfo" 
+                  className="bg-white border-4 border-black rounded-none p-4 text-lg font-bold outline-none focus:border-blue-600 transition-colors"
+                  placeholder="hello@craftdesign.com"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="message" className="font-bold text-lg mb-2">문의 내용</label>
+                <textarea 
+                  id="message" 
+                  rows={5}
+                  className="bg-white border-4 border-black rounded-none p-4 text-lg font-bold outline-none focus:border-blue-600 transition-colors resize-y"
+                  placeholder="원하시는 제품과 수량을 적어주세요."
+                ></textarea>
+              </div>
+
+              <button 
+                type="submit" 
+                className="w-full bg-red-500 text-white font-black text-xl rounded-none p-6 border-4 border-black shadow-[4px_4px_0_0_#000] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all mt-4"
+              >
+                문의하기 ✦
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
