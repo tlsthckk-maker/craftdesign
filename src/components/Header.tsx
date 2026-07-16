@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-[#F4F4F0] border-b-4 border-black flex items-center justify-between px-4 md:px-8 py-4">
-        <Link href="/#process" className="text-2xl md:text-3xl font-black tracking-tighter hover:italic cursor-pointer transition-all" onClick={closeMenu}>
+        <Link href="/" className="text-2xl md:text-3xl font-black tracking-tighter hover:italic cursor-pointer transition-all" onClick={closeMenu}>
           CRAFTDESIGN
         </Link>
         
