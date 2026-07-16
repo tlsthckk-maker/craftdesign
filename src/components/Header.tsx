@@ -6,12 +6,20 @@ import Link from "next/link";
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const closeMenu = () => setIsMobileMenuOpen(false);
+  const handleLogoClick = (e: React.MouseEvent) => {
+    setIsMobileMenuOpen(false);
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Remove hash from URL without reloading
+      window.history.pushState(null, '', '/');
+    }
+  };
 
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-[#F4F4F0] border-b-4 border-black flex items-center justify-between px-4 md:px-8 py-4">
-        <Link href="/" className="text-2xl md:text-3xl font-black tracking-tighter hover:italic cursor-pointer transition-all" onClick={closeMenu}>
+        <Link href="/" className="text-2xl md:text-3xl font-black tracking-tighter hover:italic cursor-pointer transition-all" onClick={handleLogoClick}>
           CRAFTDESIGN
         </Link>
         
