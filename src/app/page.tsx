@@ -157,7 +157,7 @@ export default function Home() {
             <div className="group bg-white border-4 border-black shadow-[10px_10px_0_0_#000] hover:-translate-y-3 hover:-translate-x-3 hover:shadow-[20px_20px_0_0_#000] transition-all duration-300 ease-in-out flex flex-col cursor-pointer">
               <div className="w-full aspect-[4/3] border-b-4 border-black relative overflow-hidden bg-gray-100">
                 <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Modular_Tactical_Vest.jpg" 
+                  src="/portfolio-1.jpg" 
                   alt="Tactical Vest" 
                   className="w-full h-full object-cover grayscale"
                 />
@@ -174,7 +174,7 @@ export default function Home() {
             <div className="group bg-white border-4 border-black shadow-[10px_10px_0_0_#000] hover:-translate-y-3 hover:-translate-x-3 hover:shadow-[20px_20px_0_0_#000] transition-all duration-300 ease-in-out flex flex-col cursor-pointer">
               <div className="w-full aspect-[4/3] border-b-4 border-black relative overflow-hidden bg-gray-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&q=80&w=800" 
+                  src="/portfolio-2.jpg" 
                   alt="Baseball Cap" 
                   className="w-full h-full object-cover grayscale"
                 />
@@ -191,7 +191,7 @@ export default function Home() {
             <div className="group bg-white border-4 border-black shadow-[10px_10px_0_0_#000] hover:-translate-y-3 hover:-translate-x-3 hover:shadow-[20px_20px_0_0_#000] transition-all duration-300 ease-in-out flex flex-col cursor-pointer">
               <div className="w-full aspect-[4/3] border-b-4 border-black relative overflow-hidden bg-gray-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800" 
+                  src="/portfolio-3.jpg" 
                   alt="Car Interior Accessories" 
                   className="w-full h-full object-cover grayscale"
                 />
