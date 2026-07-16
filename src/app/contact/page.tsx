@@ -111,6 +111,7 @@ export default function ContactPage() {
 
               <input 
                 type="file" 
+                name="attachment"
                 multiple 
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                 onChange={(e) => {
