@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     description: "대형 브랜드가 믿고 맡기는 커스텀 제작의 최전선.",
     images: ["https://www.k-mooncraft.com/og-image.png"],
   },
+  verification: {
+    google: "tI_qRHmE5mrWfvJ0QRqUUsfyHVkUySMzDrKn8vlTXgQ",
+  },
 };
 
 export const viewport: Viewport = {
