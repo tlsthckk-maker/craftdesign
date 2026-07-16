@@ -8,6 +8,7 @@ export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isAgreed, setIsAgreed] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -88,12 +89,35 @@ export default function ContactPage() {
             <label className="font-black text-xl md:text-2xl uppercase border-b-4 border-black pb-2 inline-block">참고 도면/이미지 업로드</label>
             <div className="relative border-4 border-dashed border-black bg-white hover:bg-[#F4F4F0] transition-colors p-8 md:p-16 flex flex-col items-center justify-center cursor-pointer group">
               <div className="text-4xl md:text-6xl mb-4 group-hover:scale-110 transition-transform">📂</div>
-              <p className="text-lg md:text-2xl font-bold text-center break-keep">여기에 파일을 드래그해서 놓거나 클릭하세요.</p>
-              <p className="text-sm md:text-base text-gray-500 font-medium mt-2 text-center">최대 50MB, JPG/PNG/PDF/ZIP 지원</p>
+              
+              {selectedFiles.length > 0 ? (
+                <div className="flex flex-col items-center z-0 w-full max-w-md">
+                  <p className="text-lg md:text-2xl font-black text-blue-600 break-keep mb-3">
+                    {selectedFiles.length}개의 파일이 선택됨
+                  </p>
+                  <ul className="text-sm md:text-base text-gray-700 font-bold max-h-32 overflow-y-auto w-full text-center px-4 space-y-1">
+                    {selectedFiles.map((file, idx) => (
+                      <li key={idx} className="truncate bg-gray-100 py-1 px-3 rounded">{file.name}</li>
+                    ))}
+                  </ul>
+                  <p className="text-xs md:text-sm text-gray-500 font-medium mt-4">박스를 다시 클릭하여 파일을 변경할 수 있습니다.</p>
+                </div>
+              ) : (
+                <>
+                  <p className="text-lg md:text-2xl font-bold text-center break-keep">여기에 파일을 드래그해서 놓거나 클릭하세요.</p>
+                  <p className="text-sm md:text-base text-gray-500 font-medium mt-2 text-center">최대 50MB, JPG/PNG/PDF/ZIP 지원</p>
+                </>
+              )}
+
               <input 
                 type="file" 
                 multiple 
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                onChange={(e) => {
+                  if (e.target.files) {
+                    setSelectedFiles(Array.from(e.target.files));
+                  }
+                }}
               />
             </div>
           </div>
