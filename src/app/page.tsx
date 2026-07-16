@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#F4F4F0] overflow-hidden">
@@ -30,13 +32,13 @@ export default function Home() {
         </p>
 
         {/* CTA 버튼 */}
-        <button className="group relative bg-blue-600 text-white font-black text-xl sm:text-2xl px-12 py-6 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] active:translate-y-2 active:translate-x-2 active:shadow-none">
+        <Link href="/contact" className="group relative bg-blue-600 text-white font-black text-xl sm:text-2xl px-12 py-6 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] active:translate-y-2 active:translate-x-2 active:shadow-none inline-block">
           [ START PROJECT ➔ ]
-        </button>
+        </Link>
       </div>
 
       {/* 4. Why Us 섹션 (Section 2) */}
-      <section className="w-full py-16 md:py-24 bg-[#F4F4F0] px-4 border-t-4 border-black">
+      <section id="about" className="w-full py-16 md:py-24 bg-[#F4F4F0] px-4 border-t-4 border-black">
         <div className="max-w-6xl mx-auto">
           {/* 섹션 타이틀 */}
           <h2 className="text-4xl md:text-7xl font-black mb-12 md:mb-16 text-center tracking-tighter break-keep">
@@ -67,11 +69,11 @@ export default function Home() {
 
             {/* 카드 3 */}
             <div className="bg-white border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-transform duration-200 p-6 md:p-8 flex flex-col items-start">
-              <span className="inline-block bg-pink-500 text-white border-4 border-black font-black px-4 py-2 text-base md:text-lg uppercase mb-4 md:mb-6">
-                DIRECT CONTROL
+              <span className="inline-block bg-[#FF0000] text-white border-4 border-black font-black px-4 py-2 text-base md:text-lg uppercase mb-4 md:mb-6">
+                RISK HANDLER
               </span>
               <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
-                하청의 하청? 없습니다. 철저한 다이렉트 핸들링으로 1인 창업자도 대형 브랜드와 동일한 생산 퀄리티를 누릴 수 있습니다.
+                커스텀 제작의 수많은 변수와 리스크. 대형 업체조차 기피하는 그 까다로운 현장을 최전선에서 완벽하게 통제하는 진짜 실무자입니다.
               </p>
             </div>
           </div>
@@ -79,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* 5. What We Make 섹션 (Section 3) */}
-      <section className="w-full py-16 md:py-24 bg-[#E5E5E5] px-4 border-t-4 border-black">
+      <section id="capabilities" className="w-full py-16 md:py-24 bg-[#E5E5E5] px-4 border-t-4 border-black">
         <div className="max-w-6xl mx-auto">
           {/* 섹션 타이틀 */}
           <div className="mb-12 md:mb-16 border-b-8 border-dotted border-black pb-8">
@@ -124,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* 6. HOW IT WORKS 섹션 (Section 4) */}
-      <section className="w-full py-16 md:py-24 bg-[#F4F4F0] px-4 border-t-4 border-black">
+      <section id="process" className="w-full py-16 md:py-24 bg-[#F4F4F0] px-4 border-t-4 border-black">
         <div className="max-w-6xl mx-auto">
           {/* 섹션 타이틀 */}
           <h2 className="text-4xl md:text-7xl font-black mb-12 md:mb-16 text-center tracking-tighter break-keep">
@@ -185,9 +187,9 @@ export default function Home() {
           <p className="text-lg md:text-2xl text-white mb-8 md:mb-12 font-medium break-keep">
             당신의 넥스트 베스트셀러, 지금 견적을 확인하세요.
           </p>
-          <button className="group relative bg-pink-500 text-white font-black text-lg md:text-2xl px-8 py-4 md:px-12 md:py-6 border-4 border-white shadow-[4px_4px_0px_#CCFF00] md:shadow-[8px_8px_0px_#CCFF00] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_#CCFF00] md:hover:shadow-[12px_12px_0px_#CCFF00] active:translate-y-2 active:translate-x-2 active:shadow-none break-keep w-full sm:w-auto">
+          <Link href="/contact" className="group relative bg-pink-500 text-white font-black text-lg md:text-2xl px-8 py-4 md:px-12 md:py-6 border-4 border-white shadow-[4px_4px_0px_#CCFF00] md:shadow-[8px_8px_0px_#CCFF00] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_#CCFF00] md:hover:shadow-[12px_12px_0px_#CCFF00] active:translate-y-2 active:translate-x-2 active:shadow-none break-keep w-full sm:w-auto inline-block">
             폼 작성하고 24시간 내 견적 받기
-          </button>
+          </Link>
         </div>
       </section>
     </main>

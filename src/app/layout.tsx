@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_KR } from "next/font/google";
+import Link from "next/link";
+import PrivacyPolicy from "../components/PrivacyPolicy";
+import Header from "../components/Header";
 import "./globals.css";
 
 const notoSansKr = Noto_Sans_KR({
@@ -41,31 +44,7 @@ export default function RootLayout({
       <body className="bg-[#F4F4F0] text-black min-h-screen flex flex-col font-sans">
         
         {/* Global Header */}
-        <header className="sticky top-0 z-50 w-full bg-[#F4F4F0] border-b-4 border-black flex items-center justify-between px-4 md:px-8 py-4">
-          <div className="text-2xl md:text-3xl font-black tracking-tighter hover:italic cursor-pointer transition-all">
-            CRAFTDESIGN
-          </div>
-          
-          {/* Desktop Nav & CTA */}
-          <div className="hidden md:flex items-center gap-6">
-            <nav className="flex items-center gap-2 font-bold text-lg">
-              {["ABOUT", "CAPABILITIES", "PROCESS", "CONTACT"].map((item) => (
-                <a key={item} href={`#${item.toLowerCase()}`} className="px-4 py-2 border-2 border-transparent hover:border-black hover:bg-[#CCFF00] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all cursor-pointer uppercase">
-                  {item}
-                </a>
-              ))}
-            </nav>
-
-            <button className="bg-blue-600 text-white font-black px-6 py-3 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] active:translate-y-1 active:translate-x-1 active:shadow-[0px_0px_0px_rgba(0,0,0,1)] transition-transform">
-              GET QUOTE
-            </button>
-          </div>
-
-          {/* Mobile Hamburger */}
-          <button className="md:hidden flex items-center justify-center py-2 px-3 border-4 border-black bg-white shadow-[4px_4px_0px_rgba(0,0,0,1)] active:translate-y-1 active:translate-x-1 active:shadow-[0px_0px_0px_rgba(0,0,0,1)] transition-transform" aria-label="Menu">
-            <span className="text-2xl font-black leading-none">☰</span>
-          </button>
-        </header>
+        <Header />
 
         <div className="flex-1">
           {children}
@@ -79,15 +58,21 @@ export default function RootLayout({
               <p className="text-lg md:text-xl font-bold uppercase">YOUR IDEA, OUR FACTORY.</p>
             </div>
 
-            <div className="flex flex-col text-sm md:text-base font-bold leading-relaxed tracking-tight text-gray-800">
-              <p>대표: 문승탁 | 사업자등록번호: 000-00-00000</p>
-              <p>주소: 강원도 철원군 (상세 주소 임시 처리)</p>
-              <p>이메일: info@craftdesign.com</p>
+            <div className="flex flex-col gap-1 text-sm md:text-base font-bold leading-relaxed tracking-tight text-gray-800 break-keep">
+              <p>
+                상호: 크래프트디자인 (Craftdesign) <span className="mx-1 text-gray-400">|</span> 대표: 문승탁 <span className="mx-1 text-gray-400">|</span> 사업자등록번호: 208-10-35936 <span className="mx-1 text-gray-400">|</span> 통신판매업신고: 2017-진접오남-0452
+              </p>
+              <p>
+                주소: 경기도 남양주시 진접읍 팔야로 101 <span className="mx-1 text-gray-400">|</span> 연락처: 010-5229-7377 <span className="mx-1 text-gray-400">|</span> 이메일: tlsthckk@naver.com
+              </p>
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between border-t-4 border-black pt-8">
-            <p className="font-bold text-sm md:text-base mb-6 md:mb-0">© 2026 CRAFTDESIGN. All rights reserved.</p>
+            <div className="flex flex-col sm:flex-row items-center mb-6 md:mb-0 gap-2 sm:gap-0">
+              <p className="font-bold text-sm md:text-base">© 2026 CRAFTDESIGN. All rights reserved.</p>
+              <PrivacyPolicy />
+            </div>
             
             <a href="#" className="flex items-center justify-center w-14 h-14 bg-[#F4F4F0] border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] active:translate-y-1 active:translate-x-1 active:shadow-[0px_0px_0px_rgba(0,0,0,1)] transition-transform font-black text-2xl" aria-label="Back to top">
               ↑

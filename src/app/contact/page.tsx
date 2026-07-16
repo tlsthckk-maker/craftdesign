@@ -1,13 +1,44 @@
 "use client";
 
-import { useState } from "react";
-
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+import Link from "next/link";
 export default function ContactPage() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isAgreed, setIsAgreed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSuccess(true);
+    
+    if (!isAgreed) {
+      alert("개인정보 수집 및 이용에 동의해 주세요.");
+      return;
+    }
+
+    if (!formRef.current) return;
+    
+    setIsLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_hp7s1el",
+        "template_d2c1svn",
+        formRef.current,
+        "Lu3Qf9_3y71b6D8M8"
+      )
+      .then(
+        (result) => {
+          setIsLoading(false);
+          setIsSuccess(true);
+        },
+        (error) => {
+          console.error(error.text);
+          setIsLoading(false);
+          alert("전송에 실패했습니다. 잠시 후 다시 시도해 주세요.");
+        }
+      );
   };
 
   return (
@@ -25,7 +56,7 @@ export default function ContactPage() {
         </div>
 
         {/* 견적 요청 폼 디자인 (Main Form) */}
-        <form onSubmit={handleSubmit} className="bg-white border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_rgba(0,0,0,1)] p-6 md:p-12 flex flex-col gap-8 md:gap-12">
+        <form ref={formRef} onSubmit={handleSubmit} className="bg-white border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_rgba(0,0,0,1)] p-6 md:p-12 flex flex-col gap-8 md:gap-12">
           
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-2">
@@ -67,12 +98,31 @@ export default function ContactPage() {
             </div>
           </div>
 
+          {/* 개인정보 수집 동의 */}
+          <div className="flex flex-col gap-2 mt-4 md:mt-6">
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input 
+                type="checkbox" 
+                checked={isAgreed}
+                onChange={(e) => setIsAgreed(e.target.checked)}
+                className="w-5 h-5 md:w-6 md:h-6 accent-black cursor-pointer border-4 border-black"
+              />
+              <span className="text-sm md:text-base font-bold break-keep">
+                [필수] 개인정보 수집 및 이용에 동의합니다.
+              </span>
+            </label>
+            <p className="text-xs md:text-sm text-gray-500 font-bold break-keep pl-8 md:pl-9">
+              (수집목적: 견적 상담 및 회신 / 보유기간: 상담 완료 후 6개월 보관 후 파기)
+            </p>
+          </div>
+
           {/* 최종 전송 버튼 */}
           <button 
             type="submit" 
-            className="w-full bg-pink-500 text-white font-black text-xl md:text-4xl px-6 py-6 md:px-8 md:py-8 border-4 border-black shadow-[6px_6px_0px_#CCFF00] md:shadow-[8px_8px_0px_#CCFF00] transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_#CCFF00] md:hover:shadow-[12px_12px_0px_#CCFF00] active:translate-y-2 active:translate-x-2 active:shadow-none mt-4 md:mt-8"
+            disabled={isLoading}
+            className={`w-full bg-pink-500 text-white font-black text-xl md:text-4xl px-6 py-6 md:px-8 md:py-8 border-4 border-black shadow-[6px_6px_0px_#CCFF00] md:shadow-[8px_8px_0px_#CCFF00] transition-transform active:shadow-none mt-4 md:mt-8 ${isLoading ? "opacity-70 cursor-not-allowed" : "hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_#CCFF00] md:hover:shadow-[12px_12px_0px_#CCFF00] active:translate-y-2 active:translate-x-2"}`}
           >
-            [ 제작 문의 접수하기 ➔ ]
+            {isLoading ? "[ 전송 중... ]" : "[ 제작 문의 접수하기 ➔ ]"}
           </button>
         </form>
       </div>
@@ -98,12 +148,12 @@ export default function ContactPage() {
             </p>
 
             {/* 닫기 / 홈으로 가기 버튼 */}
-            <button 
-              onClick={() => window.location.href = '/'}
-              className="w-full bg-blue-600 text-white font-black text-lg md:text-xl px-6 py-4 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none transition-all"
+            <Link 
+              href="/"
+              className="w-full bg-blue-600 text-white font-black text-lg md:text-xl px-6 py-4 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none transition-all inline-block text-center"
             >
               [ 메인으로 돌아가기 ]
-            </button>
+            </Link>
           </div>
         </div>
       )}
