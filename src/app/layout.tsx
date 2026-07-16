@@ -19,14 +19,25 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CRAFTDESIGN | 하이엔드 B2B 커스텀 제조 에이전시",
     description: "대형 브랜드가 믿고 맡기는 커스텀 제작의 최전선. 변수를 통제하고 리스크를 감당하는 진짜 실무자를 만나보세요.",
+    url: "https://www.k-mooncraft.com/",
+    siteName: "CRAFTDESIGN",
+    locale: "ko_KR",
     type: "website",
-    url: "https://www.craftdesign.co.kr",
     images: [
       {
-        url: "/og-image.jpg", // TODO: 힙한 네오 브루탈리즘 스타일의 썸네일 이미지를 public 폴더에 추가할 예정
-      }
-    ]
-  }
+        url: "https://www.k-mooncraft.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CRAFTDESIGN B2B Manufacture Agency Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CRAFTDESIGN | 하이엔드 B2B 커스텀 제조 에이전시",
+    description: "대형 브랜드가 믿고 맡기는 커스텀 제작의 최전선.",
+    images: ["https://www.k-mooncraft.com/og-image.png"],
+  },
 };
 
 export const viewport: Viewport = {
