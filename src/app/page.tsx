@@ -262,8 +262,8 @@ export default function Home() {
 
       {/* 7. CONTACT 섹션 (Section 5) */}
       <section className="w-full py-20 md:py-32 bg-black px-4 text-center border-t-4 border-black flex flex-col items-center justify-center">
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
-          <h2 className="text-4xl md:text-7xl font-black text-[#CCFF00] mb-4 md:mb-6 tracking-tighter break-keep">
+        <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-[#CCFF00] mb-4 md:mb-6 tracking-tighter break-keep xl:whitespace-nowrap">
             LET&apos;S MAKE SOMETHING SICK.
           </h2>
           <p className="text-lg md:text-2xl text-white mb-8 md:mb-12 font-medium break-keep">
