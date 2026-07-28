@@ -114,7 +114,7 @@ export default function Home() {
                 HEADWEAR
               </h3>
               <p className="text-lg md:text-2xl font-bold leading-relaxed w-full md:text-right break-keep">
-                볼캡, 버킷햇, 비니. 핏이 생명인 트렌디 헤드웨어 기획부터 생산까지.
+                볼캡, 버킷햇, 비니. 섬세한 핏과 디테일이 살아있는 트렌디 헤드웨어의 기획부터 원스톱 생산까지 책임집니다.
               </p>
             </div>
 
@@ -124,7 +124,7 @@ export default function Home() {
                 BAGS & LUGGAGE
               </h3>
               <p className="text-lg md:text-2xl font-bold leading-relaxed w-full md:text-right break-keep">
-                베이직한 캔버스 에코백부터 기능성 방수 나일론 테크웨어 백팩까지 완벽 구현.
+                기본적인 캔버스 에코백부터 고기능성 방수 테크웨어 백팩까지, 의도한 디테일을 완벽하게 실물로 구현합니다
               </p>
             </div>
 
@@ -134,7 +134,7 @@ export default function Home() {
                 AUTO & TACTICAL
               </h3>
               <p className="text-lg md:text-2xl font-bold leading-relaxed w-full md:text-right break-keep">
-                가혹한 환경을 견뎌야 하는 차량용 소품 및 고내구성 특수 목적 아웃도어 기어.
+                가혹한 환경에서도 견디는 강력한 내구성. 차량용 프레임 소품부터 특수 목적용 아웃도어·택티컬 기어를 정교하게 제작합니다.
               </p>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function Home() {
                 01. TALK
               </span>
               <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
-                아이디어 투척 (예산 및 기획 상담)
+                프로젝트 상담 (예산 및 맞춤 기획)
               </p>
             </div>
 
@@ -233,7 +233,7 @@ export default function Home() {
                 02. MATCH
               </span>
               <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
-                최적의 공장 세팅 (국내/중국 인프라 소싱)
+                맞춤 인프라 매칭 (국내•외 최적 제조 공장 소싱)
               </p>
             </div>
 
@@ -243,7 +243,7 @@ export default function Home() {
                 03. PROTOTYPE
               </span>
               <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
-                본 생산 전 깐깐한 샘플링
+                정밀 샘플링
               </p>
             </div>
 
@@ -253,7 +253,7 @@ export default function Home() {
                 04. DROP
               </span>
               <p className="text-lg md:text-xl font-bold leading-relaxed text-black break-keep">
-                철저한 QC(품질 검수) 및 납품 완료
+                품질 검수 및 납품(철저한 QC 프로세스 준수)
               </p>
             </div>
           </div>
